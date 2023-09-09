@@ -3,13 +3,11 @@ const mongoose = require('mongoose');
 const apiRoutes = require('./routes/api')
 const app = express();
 
-
+//Env
 require('dotenv').config();
-
-
-//Database Conection
 uri = process.env.DATABASE_URI;
 
+//Database Conection
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
