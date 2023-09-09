@@ -1,4 +1,4 @@
-# My Microservice - Exemplo de Aplicação Express
+# Exemplo de Aplicação Express
 
 Este é um exemplo de aplicação Express. Esta aplicação simples inclui um controlador de usuário, um modelo de usuário e rotas de API básicas.
 
