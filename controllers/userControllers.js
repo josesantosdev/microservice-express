@@ -1,7 +1,7 @@
-import { User } from '../models/userModel';
+const User = require('../models/userModel');
 
 
-export async function getUsers(req, res) {
+module.exports.getUsers = async (req, res) => {
     try {
         const users = await User.find();
         res.json(users);

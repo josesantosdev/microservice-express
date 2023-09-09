@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const apiRoutes = require('./routes/api')
 const app = express();
+
 
 require('dotenv').config();
 
@@ -16,6 +18,7 @@ mongoose.connect(uri, {
 
 //Midlewares register
 app.use(express.json());
+app.use('/api', apiRoutes);
 
 
 //Server
