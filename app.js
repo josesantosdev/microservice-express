@@ -1,5 +1,5 @@
-const express = require('express');
-const mongoose = require('mongoose');
+import express, { json } from 'express';
+import { connect } from 'mongoose';
 const app = express();
 
 require('dotenv').config();
@@ -8,14 +8,14 @@ require('dotenv').config();
 //Database Conection
 uri = process.env.DATABASE_URI;
 
-mongoose.connect(uri, {
+connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
 
 //Midlewares register
-app.use(express.json());
+app.use(json());
 
 
 //Server
