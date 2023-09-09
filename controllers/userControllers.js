@@ -10,7 +10,7 @@ module.exports.getUsers = async (req, res) => {
         console.error(err)
         res.status(500).json({ error: 'Internal Server Error' })
     }
-}
+};
 
 module.exports.getOneUser = async (req, res) => {
     const userId = req.params.userId;
@@ -31,4 +31,20 @@ module.exports.getOneUser = async (req, res) => {
         console.error(err);
         res.status(500).json({error: 'Internal Server Error'});
     }
-}
+};
+
+module.exports.createUser = async (req, res) => {
+    const {name, email} = req.body;
+
+    if (!name || email) {
+        res.status(400).json({ error: 'Name and email are required' });    
+    }
+
+    try {
+        const newUser = new User(name, email);
+        const savedUser = await newUser.save();
+        res.json(201).json(savedUser);
+    } catch (err) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
