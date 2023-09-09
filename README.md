@@ -42,17 +42,6 @@ Isso iniciará o servidor Express localmente. Você poderá acessar a aplicaçã
 
 A aplicação inclui rotas de API básicas para gerenciar usuários. Você pode acessar as rotas em /api seguido pelos endpoints apropriados. Certifique-se de verificar o arquivo routes/api.js para obter mais detalhes sobre as rotas disponíveis.
 
-## Estrutura de Arquivos:
-
-microservice-express
-  ├── controllers/                  
-  │   └── userController.js        //Arquivo de controllers responsável pelas requisições http
-  ├── models/
-  │   └── userModel.js             //Arquivo de models reponsável pelas entidades da aplicação
-  ├── routes/
-  │   └── api.js                   //Arquivo de rotas da api
-  ├── app.js                       //Servidor
-  └── package.json                 //Arquivo de configuração das dependências.
 
 ## Contribuindo
 
