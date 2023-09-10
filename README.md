@@ -6,6 +6,18 @@ Este é um exemplo de aplicação Express. Esta aplicação simples inclui um co
 
 Antes de começar, certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [nodejs.org](https://nodejs.org/).
 
+## Configurando o banco de dados.
+Certifique-se de que o dotenv está instalado na aplicação
+
+```bash
+    npm dotenv --version
+    9.6.7
+```
+Crie um arquivo .env na pasta raiz do projeto.
+Dentro do arquivo crie uma variavel de ambinete DATABASE_URI, configure a string de acordo com o as configurações do seu mongoDB.
+```shell
+    DATABASE_URI='mongodb://<Usuário>:<Senha>@<Host>:<Port>/<Database>'
+```
 ## Clonando o Repositório
 
 Para começar, clone este repositório para sua máquina local usando o seguinte comando:
