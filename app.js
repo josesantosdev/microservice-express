@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const apiRoutes = require('./routes/api')
 const app = express();
+const cors = require('cors');
 
 //Env
 require('dotenv').config();
@@ -13,6 +14,8 @@ mongoose.connect(uri, {
     useUnifiedTopology: true,
 });
 
+//CORS
+app.use(cors());
 
 //Midlewares register
 app.use(express.json());
